@@ -71,6 +71,53 @@ window.addEventListener("keydown", function(e){
 });
 
 
+// moving usercar with key buttons
+
+document.querySelector("#left").addEventListener("click", function(e){
+    var userCarLeft = parseInt(window.getComputedStyle(userCar).getPropertyValue("left"));
+    if(userCarLeft > 0){
+        userCar.style.left = (userCarLeft - 130) + "px";
+        jumpsound.play();
+    }
+    var userUpdatedLeft = parseInt(window.getComputedStyle(userCar).getPropertyValue("left"));
+    if(userUpdatedLeft == 0){
+        userCar.style.textAlign = "right";
+    }
+    if(userUpdatedLeft == 130){
+        userCar.style.textAlign = "center";
+    }
+    if(userUpdatedLeft == 260){
+        userCar.style.textAlign = "left";
+    }
+    document.querySelector("#left").classList.add("pressed");
+    setTimeout(function(){
+        document.querySelector("#left").classList.remove("pressed");
+    }, 100);
+});
+
+document.querySelector("#right").addEventListener("click", function(e){
+    var userCarLeft = parseInt(window.getComputedStyle(userCar).getPropertyValue("left"));
+    if(userCarLeft < 260){
+        userCar.style.left = (userCarLeft + 130) + "px";
+        jumpsound.play();
+    }
+    var userUpdatedLeft = parseInt(window.getComputedStyle(userCar).getPropertyValue("left"));
+    if(userUpdatedLeft == 0){
+        userCar.style.textAlign = "right";
+    }
+    if(userUpdatedLeft == 130){
+        userCar.style.textAlign = "center";
+    }
+    if(userUpdatedLeft == 260){
+        userCar.style.textAlign = "left";
+    }
+    document.querySelector("#right").classList.add("pressed");
+    setTimeout(function(){
+        document.querySelector("#right").classList.remove("pressed");
+    }, 100);
+});
+
+
 // game over conditions
 
 setInterval(function Gameover(){
