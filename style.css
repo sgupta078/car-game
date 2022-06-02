@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/back.jpg);
+}
+
+#gameCon{
+    height: 100vh;
+    /* height: 700px; */
+    width: 390px;
+    border: 1px solid black;
+    margin: 0px auto;
+    background: url(./images/bg.jpg);
+    background-size: contain;
+    overflow: hidden;
+}
+
+#oppCar1{
+    height: 100px;
+    width: 130px;
+    /* background-color: blue; */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation: move 2s linear infinite;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+#oppCar2{
+    height: 100px;
+    width: 130px;
+    /* background-color: blue; */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation: move 1.5s linear infinite;
+    text-align: right;
+}
+
+#oppCar1 img{
+    height: 100px;
+}
+
+#oppCar2 img{
+    height: 100px;
+}
+
+@keyframes move {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 701px;
+    }
+}
+
+#userCar{
+    height: 100px;
+    width: 130px;
+    /* background-color: orange; */
+    position: relative;
+    top: 250px;
+    left: 130px;
+    text-align: center;
+}
+
+#userCar img{
+    height: 100px;
+}
+
+#result{
+    height: 200px;
+    width: 400px;
+    background-color: cornflowerblue;
+    margin: 1rem auto;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+#score{
+    font-size: 2.2rem;
+    color: brown;
+}
+
+#btn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: cyan;
+    font-size: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
